@@ -1,0 +1,53 @@
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <padding>
+        <Insets right="10"/>
+        <Insets left="10"/>
+        <Insets top="10"/>
+        <Insets bottom="10"/>
+    </padding>
+
+    <Label text="Convert" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+
+    <ComboBox  fx:id="listCurrencyFrm" GridPane.rowIndex="0" GridPane.columnIndex="1">
+<!--        <items>-->
+<!--            <FXCollections fx:factory="observableArrayList">-->
+<!--                <String fx:value="USD Dollar" />-->
+<!--                <String fx:value="EUR Euro" />-->
+<!--                <String fx:value="GBP British Pound" />-->
+<!--                <String fx:value="CAD Canadian Dollar" />-->
+<!--                <String fx:value="RSD Dinar" />-->
+<!--            </FXCollections>-->
+<!--        </items>-->
+    </ComboBox>
+
+<!--    <Button fx:id="switchIt" text="switch" GridPane.rowIndex="2" GridPane.columnIndex="1" />-->
+
+    <Label text="To" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <Label text="Amount" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <ComboBox fx:id="listCurrencyTo" GridPane.rowIndex="1" GridPane.columnIndex="1">
+        <items>
+<!--            <FXCollections fx:factory="observableArrayList">-->
+<!--                <String fx:value="USD US Dollar" />-->
+<!--                <String fx:value="EUR Euro" />-->
+<!--                <String fx:value="GBP British Pound" />-->
+<!--                <String fx:value="CAD Canadian Dollar" />-->
+<!--                <String fx:value="RSD Dinar" />-->
+<!--            </FXCollections>-->
+        </items>
+    </ComboBox>
+
+    <Spinner fx:id="amount" GridPane.rowIndex="2" GridPane.columnIndex="1" editable="true" min="1" max="1000000"/>
+
+    <Button onAction="#convert" text="Convert" GridPane.rowIndex="3"
+            GridPane.columnIndex="1" />
+    <Label  fx:id="resultDisplay" GridPane.rowIndex="4" GridPane.columnIndex="1"
+              onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited"/>
+
+</GridPane>
